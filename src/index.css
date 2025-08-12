@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* font families */
+  --font-jost: "Jost", sans-serif;
+  --font-marcellus: "Marcellus", serif;
+
+  /* colors */
+  --color-primary: #ab8965;
+  --color-dark: #171717;
+  --color-light: #ffffff;
+  --color-orange: #f4791f;
+  --color-lightblue: #1f8d8d;
+  --color-titleFontColor: #181818;
+}
