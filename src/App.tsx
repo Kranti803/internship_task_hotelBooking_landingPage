@@ -3,6 +3,7 @@ import Demo from "./components/Demo";
 import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import PagesReview from "./components/PagesReview.tsx";
 import Premium from "./components/Premium";
 import Reviews from "./components/Reviews.tsx";
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Premium />
       <Reviews />
       <BookingFeatures />
+      <PagesReview />
     </main>
   );
 }

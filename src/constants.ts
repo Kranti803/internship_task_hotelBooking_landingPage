@@ -39,6 +39,17 @@ import ExtraServicesImg from "./assets/feature-extra-services.webp";
 import RoomListImg from "./assets/feature-room-list.webp";
 import EmailNotificationImg from "./assets/feature-email-notification.webp";
 
+import Rooms from "./assets/rooms.webp";
+import RoomSingle from "./assets/room-single-style-2.webp";
+import SpecialOffers from "./assets/special-offers.webp";
+import About from "./assets/about.webp";
+import Facilities from "./assets/facilities.webp";
+import Gallery from "./assets/gallery.webp";
+import GalleryCarousel from "./assets/gallery-carousel.webp";
+import News from "./assets/news.webp";
+import NewSingle from "./assets/news-single.webp";
+import Contact from "./assets/contact.webp";
+
 export const navLinks = [
   {
     title: "Intro",
@@ -300,5 +311,48 @@ export const bookingFeatures = [
   {
     title: "Email Notification",
     image: EmailNotificationImg,
+  },
+];
+
+export const pageReviews = [
+  {
+    title: "Rooms",
+    image: Rooms,
+  },
+  {
+    title: "Room Single",
+    image: RoomSingle,
+  },
+  {
+    title: "Special Offers",
+    image: SpecialOffers,
+  },
+  {
+    title: "About",
+    image: About,
+  },
+  {
+    title: "Facilities",
+    image: Facilities,
+  },
+  {
+    title: "Gallery",
+    image: Gallery,
+  },
+  {
+    title: "Gallery Carousel",
+    image: GalleryCarousel,
+  },
+  {
+    title: "News",
+    image: News,
+  },
+  {
+    title: "News Single",
+    image: NewSingle,
+  },
+  {
+    title: "Contact",
+    image: Contact,
   },
 ];

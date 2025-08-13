@@ -71,7 +71,7 @@ const BookingFeaturesCard = ({
   bookingFeatureImg: string;
 }) => {
   return (
-    <div className="flex flex-col w-[420px] h-96 rounded-2xl shrink-0 ">
+    <div className="flex flex-col max-w-[420px] h-96 rounded-2xl shrink-0 ">
       <img
         src={bookingFeatureImg}
         alt="features_image"

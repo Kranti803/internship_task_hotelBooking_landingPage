@@ -9,7 +9,7 @@ const Demo = () => {
       <h2 className="font-marcellus text-center text-[52px] text-black mb-6 pb-[5px]">
         Demo Preview
       </h2>
-      <aside className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <aside className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {demos.map((demo, index) => (
           <DemoCard
             demoImg={demo?.image}
