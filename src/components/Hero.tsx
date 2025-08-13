@@ -14,7 +14,9 @@ const Hero = () => {
       </div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex  flex-col items-center">
-        <p className="font-jost text-primary uppercase font-medium text-sm tracking-widest mb-4">Made by Elite Author</p>
+        <p className="font-jost text-primary uppercase font-medium text-sm tracking-widest mb-4">
+          Made by Elite Author
+        </p>
         <h1 className="font-marcellus text-[64px] text-white text-center mb-5">
           Luxury Hotel and Booking WordPress Theme
         </h1>
@@ -41,7 +43,7 @@ const Hero = () => {
       </div>
 
       {/* bottom gradient */}
-      <div className="absolute bottom-0 left-0 h-[30%] w-full bg-gradient-primary-bottom"></div>
+      <div className="absolute bottom-0 left-0 h-[30%] w-full bg-gradient-primary-bottom opacity-80"></div>
     </section>
   );
 };

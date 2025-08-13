@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import PagesReview from "./components/PagesReview.tsx";
 import Premium from "./components/Premium";
+import Purchase from "./components/Purchase.tsx";
 import Reviews from "./components/Reviews.tsx";
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Reviews />
       <BookingFeatures />
       <PagesReview />
+      <Purchase />
     </main>
   );
 }

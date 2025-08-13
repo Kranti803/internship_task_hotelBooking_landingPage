@@ -4,7 +4,6 @@ import { useRef } from "react";
 
 const BookingFeatures = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
-  console.log(divRef.current?.scrollLeft);
 
   const handleScrollLeft = () => {
     if (divRef?.current) divRef.current.scrollLeft -= 450;
