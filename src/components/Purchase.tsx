@@ -4,7 +4,7 @@ const Purchase = () => {
   return (
     <section className="h-screen relative overflow-hidden">
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        className="absolute inset-0 w-full h-full bg-cover"
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundAttachment: "fixed",
