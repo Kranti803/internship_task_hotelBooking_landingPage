@@ -15,3 +15,54 @@
   --color-lightblue: #1f8d8d;
   --color-titleFontColor: #181818;
 }
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ab8965;
+}
+
+/* hero_section_gradient */
+.bg-gradient-primary-bottom {
+  background: linear-gradient(
+    0deg,
+    rgba(171, 137, 101, 1) 25%,
+    rgba(171, 137, 101, 0) 100%
+  );
+}
+
+/* demo title before */
+.demo_title_before::before {
+  content: "NEW";
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 2px 5px;
+  color: #ffffff;
+  background: #ab8965;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  sborder-radius: 3px;
+  border-radius: 3px;
+}
+
+/* hiding scrollbar */
+/* For Chrome, Safari, Edge, Opera */
+.scrollbar_hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
