@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../assets/logo-white.webp";
 import { Menu, Minus } from "lucide-react";
 import { navLinks } from "../constants";
@@ -6,9 +6,18 @@ import { navLinks } from "../constants";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollingUp, setScrollingUp] = useState(false);
+  const lastScrolledPos = useRef(0);
 
   const handleScroll = () => {
+    const currentScrolledPos = window.scrollY;
+    if (currentScrolledPos < lastScrolledPos.current) {
+      setScrollingUp(true);
+    } else {
+      setScrollingUp(false);
+    }
     setScrolled(window.scrollY > 64);
+    lastScrolledPos.current = currentScrolledPos;
   };
 
   useEffect(() => {
@@ -18,9 +27,22 @@ const Header = () => {
 
   return (
     <nav
-    className={`fixed top-0 left-0 z-50 w-full  ${
-        scrolled || menuOpen ? "bg-dark shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 z-50 w-full 
+  ${!menuOpen ? "transform transition-transform duration-300" : ""} 
+  ${
+    !menuOpen
+      ? scrollingUp
+        ? "translate-y-0"
+        : "-translate-y-full"
+      : "translate-y-0"
+  } 
+  ${
+    menuOpen
+      ? "bg-dark transition-none"
+      : scrolled
+      ? "bg-dark shadow-md transition-all duration-500"
+      : "bg-transparent"
+  }`}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6 md:px-0 h-16">
         <div>
@@ -44,7 +66,7 @@ const Header = () => {
                 className="border-b-[1px] py-3 border-gray-500 hover:text-primary transition-all duration-200"
                 key={item?.title}
                 href={`#${item.link}`}
-                onClick={()=>setMenuOpen(false)}
+                onClick={() => setMenuOpen(false)}
               >
                 {item.title}
               </a>
