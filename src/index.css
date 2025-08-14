@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 @theme {
@@ -14,10 +14,6 @@ html {
   /* colors */
   --color-primary: #ab8965;
   --color-dark: #171717;
-  --color-light: #ffffff;
-  --color-orange: #f4791f;
-  --color-lightblue: #1f8d8d;
-  --color-titleFontColor: #181818;
 }
 
 /* custom scrollbar */
@@ -70,4 +66,3 @@ html {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
-

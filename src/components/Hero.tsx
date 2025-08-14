@@ -8,8 +8,7 @@ const Hero = () => {
   const sectionRef = useRef(null);
 
   const { scrollY } = useScroll();
-  console.log(scrollY);
-
+  
   const leftY = useTransform(scrollY, [0, 500], [0, 400]);
   const rightY = useTransform(scrollY, [0, 500], [0, 400]);
 
