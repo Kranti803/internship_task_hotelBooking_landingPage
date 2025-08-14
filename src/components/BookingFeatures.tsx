@@ -86,13 +86,13 @@ const BookingFeaturesCard = ({
   bookingFeatureImg: string;
 }) => {
   return (
-    <div className="flex flex-col max-w-[420px] h-52 md:h-64 lg:h-96 rounded-2xl shrink-0 ">
+    <div className="flex flex-col w-[170px] sm:w-[250px] md:w-[310px] lg:w-[420px] h-52 md:h-64 lg:h-96 rounded-2xl shrink-0 ">
       <img
         src={bookingFeatureImg}
         alt="features_image"
         className="mb-6 object-cover rounded-2xl h-3/4"
       />
-      <h3 className="mb-[10px] text-[26px] font-marcellus text-white text-center">
+      <h3 className="mb-[10px] text-[15px] md:text-[25px] font-marcellus text-white text-center">
         {title}
       </h3>
     </div>

@@ -13,12 +13,13 @@ import Loader from "./components/Loader.tsx";
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       setLoading(false);
     }, 1000);
+    return () => clearInterval(timerId);
   }, []);
 
-  if(loading) return <Loader/>
+  if (loading) return <Loader />;
   return (
     <main className="min-h-screen relative">
       <Header />
