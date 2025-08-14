@@ -1,15 +1,28 @@
 import { reviews } from "../constants";
+import { motion } from "framer-motion";
 const Reviews = () => {
   return (
     <section className="bg-[#F4F4F4] px-12 py-28">
-      <div className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center"
+      >
         Real Reviews
-      </div>
-      <h2 className="font-marcellus text-center text-[52px] text-black mb-6 pb-[5px]">
+      </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        className="font-marcellus text-center text-[52px] text-black mb-6 pb-[5px]"
+      >
         What Our Customers Saying
-      </h2>
+      </motion.h2>
       <aside className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {reviews.map((review,index) => (
+        {reviews.map((review, index) => (
           <ReviewCard
             title={review?.title}
             message={review?.message}
@@ -17,6 +30,7 @@ const Reviews = () => {
             personImg={review?.personImg}
             starImg={review?.starImg}
             key={index}
+            index={index}
           />
         ))}
       </aside>
@@ -32,15 +46,23 @@ const ReviewCard = ({
   personName,
   personImg,
   starImg,
+  index,
 }: {
   title: string;
   message: string;
   personName: string;
   personImg: string;
   starImg: string;
+  index: number;
 }) => {
   return (
-    <div className="border-[1px] border-gray-300 rounded-xl p-[30px] shadow-lg">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="border-[1px] border-gray-300 rounded-xl p-[30px] shadow-lg"
+    >
       <div>
         <div className="mb-6 font-jost  text-black/75">
           For <span className="font-bold text-[#262626]">{title}</span>
@@ -56,6 +78,6 @@ const ReviewCard = ({
           <img src={starImg} alt="rating_image" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

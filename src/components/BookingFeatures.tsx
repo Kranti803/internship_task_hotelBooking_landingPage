@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { bookingFeatures } from "../constants";
 import { useRef } from "react";
+import { motion } from "motion/react";
 
 const BookingFeatures = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -15,12 +16,24 @@ const BookingFeatures = () => {
   return (
     <section className="bg-[#F4F4F4] py-15">
       <aside className="mx-4 sm:mx-8 lg:mx-12 bg-dark rounded-lg py-15">
-        <div className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center"
+        >
           Booking Features
-        </div>
-        <h2 className="font-marcellus text-center text-[32px] sm:text-[42px] lg:text-[52px] text-white mb-3 pb-[5px]">
+        </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="font-marcellus text-center text-[32px] sm:text-[42px] lg:text-[52px] text-white mb-3 pb-[5px]"
+        >
           Room Management & Booking
-        </h2>
+        </motion.h2>
         <p className="font-jost text-center text-[15px] sm:text-[17px] mb-[20px] leading-8 text-white/75 max-w-3xl mx-auto px-4">
           Almaris theme makes creating a hotel website with booking
           functionality straightforward and efficient. Its built-in room booking
@@ -29,8 +42,12 @@ const BookingFeatures = () => {
         </p>
 
         <div className="px-14 relative">
-          <div
+          <motion.div
             ref={divRef}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true  }}
             className="flex gap-x-6 overflow-x-scroll scrollbar_hidden scroll-smooth"
           >
             {bookingFeatures?.map((item, index) => (
@@ -40,8 +57,7 @@ const BookingFeatures = () => {
                 bookingFeatureImg={item?.image}
               />
             ))}
-            {/* arrows for scrolling */}
-          </div>
+          </motion.div>
           <button
             className=" absolute left-0 top-1/2 -translate-y-1/2 outline-none border-none py-[5px] px-3 rounded-r-2xl bg-primary"
             onClick={handleScrollLeft}

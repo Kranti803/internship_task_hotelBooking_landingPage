@@ -1,14 +1,27 @@
 import { features } from "../constants";
+import { motion } from "motion/react";
 
 const Features = () => {
   return (
     <section className="bg-dark px-12 py-28">
-      <div className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        className="uppercase font-medium tracking-widest text-primary font-jost text-[13px] text-center"
+      >
         Powerfull Features
-      </div>
-      <h2 className="font-marcellus text-center text-[52px] text-white mb-6 pb-[5px]">
+      </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        className="font-marcellus text-center text-[52px] text-white mb-6 pb-[5px]"
+      >
         Effortlessly Create a Hotel Website
-      </h2>
+      </motion.h2>
       <aside className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
           <FeatureCard
@@ -16,6 +29,7 @@ const Features = () => {
             title={feature.title}
             description={feature.description}
             key={index}
+            index={index}
           />
         ))}
       </aside>
@@ -29,16 +43,24 @@ const FeatureCard = ({
   featureImg,
   title,
   description,
+  index,
 }: {
   featureImg: string;
   title: string;
   description: string;
+  index: number;
 }) => {
   return (
-    <div className="text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="text-white"
+    >
       <img src={featureImg} alt="feature_img_1" className="rounded-lg mb-3 " />
       <h3 className="font-marcellus text-[26px] mb-[10px]">{title}</h3>
       <p className="font-jost text-gray-300">{description}</p>
-    </div>
+    </motion.div>
   );
 };
