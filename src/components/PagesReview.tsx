@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const PagesReview = () => {
   return (
-    <section className="bg-[#F4F4F4] py-15 px-12">
+    <section className="bg-[#F4F4F4] py-15 px-4 md:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const PagesReview = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
-        className="font-marcellus text-center text-[52px] text-black mb-3 pb-[5px]"
+        className="font-marcellus text-center text-4xl sm:text-5xl md:text-6xl text-black mb-3 pb-[5px]"
       >
         Inner Pages Preview
       </motion.h2>

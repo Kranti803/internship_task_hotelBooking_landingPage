@@ -30,7 +30,7 @@ const BookingFeatures = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="font-marcellus text-center text-[32px] sm:text-[42px] lg:text-[52px] text-white mb-3 pb-[5px]"
+          className="font-marcellus text-center text-4xl sm:text-5xl md:text-6xl text-white mb-3 pb-[5px]"
         >
           Room Management & Booking
         </motion.h2>
@@ -86,7 +86,7 @@ const BookingFeaturesCard = ({
   bookingFeatureImg: string;
 }) => {
   return (
-    <div className="flex flex-col max-w-[420px] h-96 rounded-2xl shrink-0 ">
+    <div className="flex flex-col max-w-[420px] h-52 md:h-64 lg:h-96 rounded-2xl shrink-0 ">
       <img
         src={bookingFeatureImg}
         alt="features_image"

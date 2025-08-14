@@ -12,7 +12,7 @@ const Purchase = () => {
         }}
       ></div>
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] flex flex-col items-center text-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ const Purchase = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
           viewport={{ once: true }}
-          className="font-marcellus text-[60px] text-white mb-6 pb-[5px]"
+          className="font-marcellus text-4xl sm:text-5xl md:text-6xl text-white mb-6 pb-[5px]"
         >
           Build stunning and powerful hotel website in no time!
         </motion.h1>

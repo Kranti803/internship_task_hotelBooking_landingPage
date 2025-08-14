@@ -19,7 +19,7 @@ const Premium = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="font-marcellus text-center text-[32px] sm:text-[42px] lg:text-[52px] text-white mb-3 pb-[5px]"
+          className="font-marcellus text-center text-4xl sm:text-5xl md:text-6xl px-4 lg:px-42 text-white mb-3 pb-[5px]"
         >
           Unlock Premium Add-ons for Free, Save $200
         </motion.h2>
@@ -28,7 +28,7 @@ const Premium = () => {
           included at no extra cost.
         </p>
 
-        <div className="flex flex-wrap gap-8 justify-center items-center">
+        <div className="flex flex-wrap gap-8 justify-center items-center px-4 md:px-0">
           {premiumBenefits.map((item, index) => (
             <PremiumBenefitCards
               key={index}

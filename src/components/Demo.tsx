@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Demo = () => {
   return (
-    <section className="bg-[#F4F4F4] px-12 py-15">
+    <section id="demos_section" className="bg-[#F4F4F4] px-4 md:px-12 py-15">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const Demo = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="font-marcellus text-center text-[52px] text-black mb-6 pb-[5px]"
+        className="font-marcellus text-center text-4xl sm:text-5xl md:text-6xl text-black mb-6 pb-[5px]"
       >
         Demo Preview
       </motion.h2>

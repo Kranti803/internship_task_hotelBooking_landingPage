@@ -8,13 +8,14 @@ const Hero = () => {
   const sectionRef = useRef(null);
 
   const { scrollY } = useScroll();
-  console.log(scrollY)
+  console.log(scrollY);
 
   const leftY = useTransform(scrollY, [0, 500], [0, 400]);
   const rightY = useTransform(scrollY, [0, 500], [0, 400]);
 
   return (
     <section
+      id="intro_section"
       ref={sectionRef}
       className="relative min-h-screen bg-linear-to-r overflow-hidden"
     >
@@ -41,7 +42,7 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.5 }}
           viewport={{ once: true }}
-          className="font-marcellus text-[64px] text-white text-center mb-5"
+          className="font-marcellus text-4xl sm:text-5xl md:text-6xl text-white text-center mb-5"
         >
           Luxury Hotel and Booking WordPress Theme
         </motion.h1>
@@ -74,9 +75,9 @@ const Hero = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         style={{ y: leftY }}
-        className="absolute bottom-0 left-0 w-[600px]"
+        className="absolute bottom-0 left-0 w-1/2 md:w-2/5 lg:w-1/3 xl:w-[600px]"
       >
-        <img src={leftSS} alt="left_ss" />
+        <img src={leftSS} alt="left_ss" className="w-full h-full" />
       </motion.div>
 
       <motion.div
@@ -85,9 +86,9 @@ const Hero = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         style={{ y: rightY }}
-        className="absolute bottom-0 right-0 w-[600px]"
+        className="absolute bottom-0 right-0 w-1/2 md:w-2/5 lg:w-1/3 xl:w-[600px]"
       >
-        <img src={rightSS} alt="right_ss" />
+        <img src={rightSS} alt="right_ss" className="w-full h-full" />
       </motion.div>
 
       <div className="absolute bottom-0 left-0 h-[30%] w-full bg-gradient-primary-bottom opacity-80"></div>

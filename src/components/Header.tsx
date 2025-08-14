@@ -38,12 +38,13 @@ const Header = () => {
 
         {/* mobile navbar */}
         {menuOpen && (
-          <div className="absolute inset-0 top-16 pt-16 bg-dark w-full h-screen md:hidden text-white flex flex-col pl-6 gap-y-3 ">
+          <div className="absolute inset-0 top-16 pt-16 bg-dark w-full h-screen md:hidden text-white flex flex-col px-6 gap-y-3 ">
             {navLinks.map((item) => (
               <a
                 className="border-b-[1px] py-3 border-gray-500 hover:text-primary transition-all duration-200"
                 key={item?.title}
                 href={`#${item.link}`}
+                onClick={() => setMenuOpen(false)}
               >
                 {item.title}
               </a>
@@ -52,7 +53,7 @@ const Header = () => {
         )}
 
         <div className="flex items-center justify-center gap-x-3">
-          <button className="border-[1px] border-gray-500 px-6 py-3 font-jost text-xs font-semibold tracking-widest hover:bg-primary text-white transition-all duration-300 uppercase cursor-pointer">
+          <button className="hidden sm:block border-[1px] border-gray-500 px-6 py-3 font-jost text-xs font-semibold tracking-widest hover:bg-primary text-white transition-all duration-300 uppercase cursor-pointer">
             Purchase Now
           </button>
           {menuOpen ? (

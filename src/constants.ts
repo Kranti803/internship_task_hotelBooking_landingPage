@@ -53,12 +53,13 @@ import Contact from "./assets/contact.webp";
 export const navLinks = [
   {
     title: "Intro",
-    link: "#hero_section",
+    link: "intro_section",
   },
-  { title: "Demos", link: "#demos_section" },
+  { title: "Demos", 
+    link: "demos_section" },
   {
     title: "Features",
-    link: "#features_section",
+    link: "features_section",
   },
 ];
 
