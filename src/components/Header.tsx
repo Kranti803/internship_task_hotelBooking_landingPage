@@ -28,10 +28,10 @@ const Header = () => {
   return (
     <nav
       className={`fixed top-0 left-0 z-50 w-full 
-  ${!menuOpen ? "transform transition-transform duration-300" : ""} 
+  ${!menuOpen ? "transform transition-all duration-500" : ""} 
   ${
     !menuOpen
-      ? scrollingUp
+      ? !scrolled || scrollingUp
         ? "translate-y-0"
         : "-translate-y-full"
       : "translate-y-0"
@@ -40,7 +40,7 @@ const Header = () => {
     menuOpen
       ? "bg-dark transition-none"
       : scrolled
-      ? "bg-dark shadow-md transition-all duration-500"
+      ? "bg-dark"
       : "bg-transparent"
   }`}
     >
