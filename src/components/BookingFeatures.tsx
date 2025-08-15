@@ -44,7 +44,7 @@ const BookingFeatures = () => {
         <div className="px-14 relative">
           <motion.div
             ref={divRef}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true  }}

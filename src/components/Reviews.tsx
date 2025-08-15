@@ -59,7 +59,7 @@ const ReviewCard = ({
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.2 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
       viewport={{ once: true }}
       className="border-[1px] border-gray-300 rounded-xl p-[30px] shadow-lg"
     >

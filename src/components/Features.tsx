@@ -52,7 +52,7 @@ const FeatureCard = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.2 }}
       viewport={{ once: true }}

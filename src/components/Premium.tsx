@@ -59,9 +59,9 @@ const PremiumBenefitCards = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
       viewport={{ once: true }}
       className="bg-[#232323] p-8 sm:p-10 rounded-xl w-full sm:w-full md:w-[350px] lg:w-[380px] h-auto"
     >
